@@ -20,15 +20,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Assignment1_Selenium {
-	WebDriver driver = new ChromeDriver();
-
+	WebDriver driver;
+	String url = "http://automationbykrishna.com/";
+	
 	void setUp(String url) {
 		System.out.println("STEP - Launch Chrome brower");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-
-		System.out.println("STEP - Load URL");
-		driver.get("http://automationbykrishna.com/");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		System.out.println("STEP - Load URL");
+		driver.get(url);
 	}
 
 	void loginTest() {
@@ -46,13 +47,14 @@ public class Assignment1_Selenium {
 		System.out.println("VERIFY - Alert message should be Success!");
 		verifyAlertMessage(handleAlert(), "Success!");
 
-		System.out.println("Alert message should be verified for incorrect password");
+		System.out.println("\nAlert message should be verified for incorrect password");
 		System.out.println("Enter Credentials");
 		enterCredentials("mkanani", "123");
 
 		System.out.println("VERIFY - Alert message should be Failed!");
 		verifyAlertMessage(handleAlert(), "Failed! please enter strong password");
-
+		
+		driver.close();
 	}
 
 	String handleAlert() {
@@ -71,13 +73,13 @@ public class Assignment1_Selenium {
 	void verifyAlertMessage(String actualMessage, String expectedMessage) {
 
 		if (actualMessage.equals(expectedMessage))
-			System.out.println("Test Pass");
+			System.out.println(actualMessage + " - Test Pass");
 		else
-			System.out.println("Test Fail");
+			System.out.println(actualMessage + " - Test Fail");
 	}
 
 	void enterCredentials(String userName, String password) {
-		System.out.println("STEP - Enter Username");
+		System.out.println("STEP - Enter Username");	
 		WebElement userNameElement = driver.findElement(By.id("unameSignin"));
 		userNameElement.clear();
 		userNameElement.sendKeys(userName);
@@ -100,7 +102,8 @@ public class Assignment1_Selenium {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Assignment1_Selenium assignment1_Selenium = new Assignment1_Selenium();
+		assignment1_Selenium.loginTest();
 
 	}
 }
