@@ -1,3 +1,52 @@
+/*Pre-requisite Steps
+1)Go to http://automationbykrishna.com/
+2)Go to on Basic Elements tab.
+
+Program 1
+1)Click on Alert button.
+2)Check that alert pop up appears.
+3)Check the alert msg "You must be TechnoCredits student!!"
+4)Click OK to accept the alert.
+
+Program 2
+1)Click on Javascript Confirmation button.
+2)Check that alert pop up appears.
+3)Check the alert msg "Are you are doing your homework regularly, Press Okay else Cancel!!"
+4)Click OK to accept the alert.
+5)Check that msg appears "You pressed OK!" because OK button is clicked.
+
+Program 3
+1)Again Click on Javascript Confirmation button.
+3)Check the alert msg "Are you are doing your homework regularly, Press Okay else Cancel!!"
+4)Click Cancel to dismiss the alert.
+5)Check that msg appears "You pressed Cancel!" because cancel button is clicked.
+
+Program 4
+Write a script to automate below test steps :
+
+1) Launch Chrome brower
+2) Load http://automationbykrishna.com
+3) click on Basic Element link
+4) Enter firstName
+5) Enter lastName
+6) Enter compantyName
+7) click on Submit button
+8) Handle alert
+9) verify alert message using firstName, lastName, compantyName
+
+Program 5
+Write a script to automate below test steps :
+
+1) Launch Chrome brower
+2) Load http://automationbykrishna.com
+3) click on Basic Element link
+4) enter Email Address
+5) Enter password
+6) Click on submit button
+7) Handle alert
+8) verify alert message
+ */
+
 package minu;
 
 import java.util.concurrent.TimeUnit;
