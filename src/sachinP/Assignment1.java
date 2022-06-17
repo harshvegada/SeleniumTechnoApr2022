@@ -62,7 +62,7 @@ public class Assignment1 {
 	
 	void setUp(String url) {
 		System.out.println("STEP - Launch Chrome brower");
-		System.setProperty("webdriver.chrome.driver", "./resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		System.out.println("STEP - Load URL");
