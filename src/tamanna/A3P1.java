@@ -24,14 +24,18 @@ public class A3P1 {
 	public void preRequisites() {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver=new ChromeDriver();
+		System.out.println("Step 1 : Go to URL - https://www.facebook.com/");
 		driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
 	}
 	
 	void executeTest() {
+		
+		System.out.println("Step 2 : Click on Create New Account button");
 		driver.findElement(By.linkText("Create New Account")).click();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
+		System.out.println("Step 3 : Fill Signup form");
 		WebElement fNameElement=driver.findElement(By.name("firstname"));
 		fNameElement.clear();
 		fNameElement.sendKeys("Tamanna");
@@ -56,7 +60,7 @@ public class A3P1 {
 		dobDaySelect.selectByValue("17");
 		
 		Select dobMonthSelect=new Select(driver.findElement(By.name("birthday_month")));
-		dobDaySelect.selectByValue("1");
+		dobMonthSelect.selectByValue("1");
 		
 		Select dobYearSelect=new Select(driver.findElement(By.name("birthday_year")));
 		dobYearSelect.selectByValue("1993");
