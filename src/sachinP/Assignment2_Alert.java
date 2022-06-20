@@ -57,7 +57,7 @@ public class Assignment2_Alert {
 
 	void preRequisites(String url) {
 		System.out.println("STEP - Launch browser");
-		System.setProperty("webdriver.chrome.driver", "./resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		System.out.println("STEP - Get url");
