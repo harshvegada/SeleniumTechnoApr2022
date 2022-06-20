@@ -60,7 +60,11 @@ public class Assignment3 {
 		birthDateSelect.selectByValue("1995");
 
 		System.out.println("Select gender");
-		driver.findElement(By.className("_8esa")).click();
+		driver.findElement(By.xpath("//input[@value='-1']")).click();
+		WebElement pronounElement = driver.findElement(By.name("preferred_pronoun"));
+		Select pronounSelect = new Select(pronounElement);
+		pronounSelect.selectByValue("1");
+		
 	}
 
 	public static void main(String[] args) {
