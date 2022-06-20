@@ -1,3 +1,14 @@
+/*Assignment-1 : 12th Jun'2022 
+
+Write a script to automate below test steps :
+
+1) Launch Chrome brower
+2) Load http://automationbykrishna.com
+3) click on Registration link
+4) Enter username
+5) Enter password
+6) Click on submit button
+7) verify alter message based on password length*/
 package arti;
 
 import java.util.concurrent.TimeUnit;
