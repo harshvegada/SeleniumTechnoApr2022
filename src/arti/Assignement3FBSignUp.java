@@ -1,3 +1,11 @@
+/*Assignment - 3 : 17th Jun'2022 
+
+Step 1 : Go to URL -  https://www.facebook.com/ 
+Step 2 : Click on  Create New Account  button
+Step 3 : Fill Signup form
+
+Note : Don't click on  Sign up  button.
+*/
 package arti;
 
 import java.util.concurrent.TimeUnit;
