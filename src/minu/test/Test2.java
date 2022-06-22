@@ -1,3 +1,19 @@
+/*Automate below scenario
+1. Navigate to site `http://automationpractice.com/index.php`
+2. Click on `Sign In` button top right corner
+3. Verify whether URL contains `my-account` keyword or not
+4. enter any random email address
+5. Click on `Create an account` button
+6. Fill that form with any random details
+	a. use pin number as `37201`
+7. Click on `Register` button
+8. After Successfully registration you landed on My Account Page (Verify the title should contains My Account keyword)
+9. Verify logged in name is combination of firstName and lastName
+10. Verify `Sign out` button is getting display
+11. Click on `Sign out` button
+12. Verify you landed on Login screen(verify page title)
+ */
+
 package minu.test;
 
 import java.util.concurrent.TimeUnit;
@@ -24,7 +40,7 @@ public class Test2 {
 		driver.manage().window().maximize();
 	}
 
-	void verifySignIn(String firstName, String lastName, String email, String password) {
+	void verifySignInDetails(String firstName, String lastName, String email, String password) {
 		browserSetUp();
 		System.out.println("STEP-Click on `Sign In` button top right corner");
 		driver.findElement(By.linkText("Sign in")).click();
@@ -125,7 +141,7 @@ public class Test2 {
 	}
 
 	public static void main(String[] args) {
-		new Test2().verifySignIn("Minu", "Kumari", "minutest2@gmail.com", "Test12345");
+		new Test2().verifySignInDetails("Minu", "Kumari", "minuexam2@gmail.com", "Test12345");
 	}
 
 }
