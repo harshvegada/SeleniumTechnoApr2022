@@ -15,56 +15,69 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Assignment3 {
 
-	private WebDriver driver;
+	public static WebDriver driver;
 
-	private void browserSetUp(String url) {
-		System.out.println("STEP-Launch Chrome brower");
+	public void browserSetUp(String url) {
+		System.out.println("Step-Launch Chrome brower");
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-		System.out.println("STEP-Go to URL - https://www.facebook.com/");
+		System.out.println("Step 1-Go to URL - https://www.facebook.com/");
 		driver.get(url);
 		driver.manage().window().maximize();
 	}
 
 	void createAccount() {
+
 		browserSetUp("https://www.facebook.com/");
 
-		System.out.println("STEP-Click on Create New Account button");
+		System.out.println("Step 2-Click on Create New Account button");
 		driver.findElement(By.linkText("Create New Account")).click();
 
-		System.out.println("STEP-Fill Signup form");
+		System.out.println("Step 3-Fill Signup form");
 
 		System.out.println("Enter first name");
-		driver.findElement(By.name("firstname")).sendKeys("Test");
+		WebElement firstNameElement = driver.findElement(By.name("firstname"));
+		firstNameElement.clear();
+		firstNameElement.sendKeys("Minu");
 
 		System.out.println("Enter last name");
-		driver.findElement(By.name("lastname")).sendKeys("Test");
+		WebElement lastNameElement = driver.findElement(By.name("lastname"));
+		lastNameElement.clear();
+		lastNameElement.sendKeys("Test");
 
 		System.out.println("Enter email");
-		driver.findElement(By.name("reg_email__")).sendKeys("test12@gmail.com");
+		WebElement emailElement = driver.findElement(By.name("reg_email__"));
+		emailElement.clear();
+		emailElement.sendKeys("minu123@gmail.com");
+
 		System.out.println("ReEnter email");
-		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("test12@gmail.com");
+		WebElement emailConfirmElement = driver.findElement(By.name("reg_email_confirmation__"));
+		emailConfirmElement.clear();
+		emailConfirmElement.sendKeys("minu123@gmail.com");
 
 		System.out.println("Enter password");
-		driver.findElement(By.id("password_step_input")).sendKeys("Test@1234");
+		WebElement passwordElement = driver.findElement(By.id("password_step_input"));
+		passwordElement.clear();
+		passwordElement.sendKeys("Test@1234");
 
 		System.out.println("Select BirthDate");
-		WebElement dayElement = driver.findElement(By.name("birthday_day"));
-		Select birthDateSelect = new Select(dayElement);
-		birthDateSelect.selectByIndex(14);
-		birthDateSelect = new Select(driver.findElement(By.name("birthday_month")));
-		birthDateSelect.selectByVisibleText("Jun");
-		birthDateSelect = new Select(driver.findElement(By.id("year")));
-		birthDateSelect.selectByValue("1995");
+		Select dateSelect = new Select(driver.findElement(By.name("birthday_day")));
+		dateSelect.selectByIndex(14);
+
+		Select monthSelect = new Select(driver.findElement(By.name("birthday_month")));
+		monthSelect.selectByVisibleText("Jun");
+
+		Select yearSelect = new Select(driver.findElement(By.id("year")));
+		yearSelect.selectByValue("1995");
 
 		System.out.println("Select gender");
 		driver.findElement(By.xpath("//input[@value='-1']")).click();
+
 		WebElement pronounElement = driver.findElement(By.name("preferred_pronoun"));
 		Select pronounSelect = new Select(pronounElement);
 		pronounSelect.selectByValue("1");
-		
 	}
 
 	public static void main(String[] args) {
