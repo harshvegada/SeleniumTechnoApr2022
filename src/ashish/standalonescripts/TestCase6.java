@@ -30,7 +30,6 @@ public class TestCase6 {
 	
 	@Test
 	public void verifySkillTest() {
-		setUp();
 		
 		driver.findElement(By.xpath("//a[@data-automation-id='more_menu_child_menu_top_more'][contains(text(),'More')]")).click();
 		System.out.println("STEP -  Clicked on More tab");
