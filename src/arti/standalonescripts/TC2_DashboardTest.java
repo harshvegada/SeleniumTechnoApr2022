@@ -8,12 +8,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 
 public class TC2_DashboardTest {
 
 	private WebDriver driver;
 	
+	@BeforeClass
 	public void setup() {
 		
 		System.out.println("STEP - Launch browser");
@@ -40,6 +43,7 @@ public class TC2_DashboardTest {
 			System.out.println("User landed on dashboard page");
 	}
 	
+	@Test
 	public void widgetsTest() {
 		
 		System.out.println("STEP - Count total widgets displayed on dashboard");
