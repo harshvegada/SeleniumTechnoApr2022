@@ -19,7 +19,7 @@ protected static WebDriver driver;
 	public static void setUp(String url) {
 		
 		System.out.println("STEP -  Launch Browser");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 	
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);

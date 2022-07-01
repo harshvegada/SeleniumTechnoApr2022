@@ -17,7 +17,7 @@ public class TC5_HRAdministrationTab {
 		
 	
 		System.out.println("STEP - Launch browser");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -42,7 +42,7 @@ public class TC5_HRAdministrationTab {
 		driver.findElement(By.linkText("Manage User Roles")).click();
 	
 		System.out.println("VERIFY -  Verify by default 50 record should get display in table.");
-		int defaultRecords = Integer.parseInt(driver.findElement(By.xpath("//input[@value='50']")).getText());
+		int defaultRecords = Integer.parseInt(driver.findElement(By.xpath("//input[@value='50']")).getAttribute("value"));
 		Assert.assertEquals(defaultRecords,50);
 	}
 }
