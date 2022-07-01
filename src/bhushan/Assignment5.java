@@ -64,7 +64,7 @@ public class Assignment5 {
 	
 public static void main(String[] args) {
 	Assignment5 ass5=new Assignment5();
-	//ass5.validate14WidgetsGettingDisplay();
+	ass5.validate14WidgetsGettingDisplay();
 	ass5.validateNonZeroWidgetsGettingDisplayUnderAudioSsectionInElectronics();
 }
 }
