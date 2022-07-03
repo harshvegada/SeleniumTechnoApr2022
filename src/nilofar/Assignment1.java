@@ -46,8 +46,7 @@ public class Assignment1 {
 			e.printStackTrace();
 		}
 	}
-
-	// Enter username & password
+	
 	void setUserNamePwd(String name, String pwd) {
 		WebElement userName = driver.findElement(By.id("unameSignin"));
 		userName.clear();
