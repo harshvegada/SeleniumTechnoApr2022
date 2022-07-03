@@ -19,8 +19,9 @@ import org.testng.annotations.Test;
 
 Hint : Find total pages, find office as elements, navigate to next page.*/
 public class Assignment6 {
-  @Test
-  Set<String> findUniqueSetofOffice() {
+  
+ 
+  public HashSet<String> findUniqueSetofOffice() {
 	    System.out.println("Step-- Launch Browser");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
@@ -30,7 +31,7 @@ public class Assignment6 {
 		System.out.println("Step--Find Total no of Pages");
 		List<WebElement> totalpages=driver.findElements(By.xpath("//div[@id='example_paginate']//span/a"));
 		
-		Set<String> listofOffice=new HashSet<>();
+		HashSet<String> listofOffice=new HashSet<String>();
 		
 		for(int index=1;index<=totalpages.size();index++) {
 			int innerindexsize=driver.findElements(By.xpath("//table[@id='example']//tbody/tr/td[3]")).size();
@@ -45,5 +46,9 @@ public class Assignment6 {
 			System.out.println(listofOffice);
 			return listofOffice;
 	}
+  public static void main(String[] args) {
+	  Assignment6 ass6=new Assignment6();
+	  ass6.findUniqueSetofOffice();
+}
 	
 }
