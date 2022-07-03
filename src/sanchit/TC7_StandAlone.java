@@ -14,7 +14,7 @@ public class TC7_StandAlone {
 	
 	final String username = "admin";
 	final String password = "Vc0@vIHqZ3";
-	String newOrganizationName = "ASD2";
+	String newOrganizationName = "OrangeHRM (Pvt) Ltd(Parallel Demo)";
 	// Actual Organization Name- OrangeHRM (Pvt) Ltd(Parallel Demo)
 
 	@Test
