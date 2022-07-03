@@ -49,7 +49,7 @@ public class TestCase1_TestCase7 {
 		System.out.println("Click on HR Adminstration Tab");
 		verifyCompanyNameReflection();	
 	}
-	
+	 
    	static public WebDriver setUp(String url )
 	{
 		System.out.println("Launch Chrome Browser");
