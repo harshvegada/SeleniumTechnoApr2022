@@ -16,6 +16,14 @@ public class Prerequisites {
 		return driver;
 	}
 	
+	public static WebDriver loadURL(String url) {
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		return driver;
+	}
+	
 	public static void redirect(WebDriver driver, String elementId) {
 		driver.findElement(By.id(elementId)).click();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
