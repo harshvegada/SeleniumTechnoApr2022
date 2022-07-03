@@ -15,7 +15,7 @@ public class PredefinedActions {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		System.out.println("Step-Load URL ");
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;

@@ -93,7 +93,7 @@ public class DashboardTest {
 	}
 	@Test
 	public void testcase_4()
-	{
+	{  
 		System.out.println("Click on Employee Management Tab");
 		dashboardpage.payableAmtNonZero();
 	}
@@ -109,6 +109,12 @@ public class DashboardTest {
 		System.out.println("Click on More Tab");
 		dashboardpage.verifyRandomSelectionOfSkill();	
 	}
-	
+	@Test
+	public void testcase_7()
+	{
+		
+		System.out.println("Click on HR Adminstration Tab");
+		dashboardpage.verifyCompanyNameReflection();	
+	}
 	
 }
