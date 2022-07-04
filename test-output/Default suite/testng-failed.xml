@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tamanna.OrangeHRM.TC3">
+      <class name="rakesh.Assignment6">
         <methods>
-          <include name="S92ClickOk"/>
-          <include name="S9VerifyEmployeeCount"/>
-          <include name="S91VerifyCompanyDetails"/>
-          <include name="S6clickSettingIcon"/>
-          <include name="S5verifyUserProfile"/>
-          <include name="S7verifySettingIconElements"/>
-          <include name="S8ClickAbout"/>
+          <include name="dataTables"/>
         </methods>
-      </class> <!-- tamanna.OrangeHRM.TC3 -->
+      </class> <!-- rakesh.Assignment6 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
