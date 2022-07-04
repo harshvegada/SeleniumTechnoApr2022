@@ -1,4 +1,4 @@
-package amar_StandAlone;
+package amar_StandAloneCase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TS2_StandAlone {
+public class TC2_StandAlone {
 	
 	final String username = "admin";
 	final String password = "C@sRqq3L4U";

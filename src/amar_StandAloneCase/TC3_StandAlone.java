@@ -1,4 +1,4 @@
-package amar_StandAlone;
+package amar_StandAloneCase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TS3_StandAlone {
+public class TC3_StandAlone {
 	
 	final String username = "admin";
 	final String password = "C@sRqq3L4U";

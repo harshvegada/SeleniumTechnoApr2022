@@ -1,4 +1,4 @@
-package amar_StandAlone;
+package amar_StandAloneCase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TS6_StandAlone {
+public class TC6_StandAlone {
 	
 	final String username = "admin";
 	final String password = "C@sRqq3L4U";

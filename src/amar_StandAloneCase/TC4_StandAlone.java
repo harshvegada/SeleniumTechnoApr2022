@@ -1,4 +1,4 @@
-package amar_StandAlone;
+package amar_StandAloneCase;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TS4_StandAlone {
+public class TC4_StandAlone {
 	
 	final String username = "admin";
 	final String password = "C@sRqq3L4U";
