@@ -21,7 +21,7 @@ public class Testcase7 {
 		WebDriver driver = new ChromeDriver();
 
 		System.out.println("STEP-URL");
-		driver.get("https://minals-trials7501.orangehrmlive.com/auth/seamlessLogin");
+		driver.get("https://ojaswi-trials7501.orangehrmlive.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
