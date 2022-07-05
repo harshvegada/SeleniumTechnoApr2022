@@ -46,7 +46,7 @@ public class Assignment6 {
 		return setOfOffices;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		Assignment6 assignment6 = new Assignment6();
 		Set<String> setOfOffices = assignment6.getUniqueOffices();
 		System.out.println(setOfOffices);
