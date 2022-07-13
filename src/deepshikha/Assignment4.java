@@ -80,7 +80,7 @@ public class Assignment4 {
 
 	//// Program - 3. Print last rows from 1st table
 
-	void lastRowFromFirstTable() {
+	void printLastRowFromFirstTable() {
 		System.out.println("Test case 3:- print last row from first table  ");
 		int numberOfRows = driver.findElements(By.xpath("//*[@id=\"table1\"]/tbody/tr")).size();
 		WebElement element1 = driver.findElement(By.xpath("//*[@id=\"table1\"]/tbody/tr[" + numberOfRows + "]"));
@@ -90,7 +90,7 @@ public class Assignment4 {
 
 	// Program - 4. return firstname of all employess from table1
 
-	List<String> printFirstName() {
+	List<String> getFirstNameOfEmployeeFromTable() {
 		System.out.println("Test case 4:- first name of all employes  ");
 		List<String> l = new ArrayList<String>();
 		int numberOfRows = driver.findElements(By.xpath("//*[@id=\"table1\"]/tbody/tr")).size();
@@ -123,7 +123,7 @@ public class Assignment4 {
 
 	// Program - 6. Unique surname from table1. [LinkedHashSet]
 
-	void printUniqueSurname() {
+	void printUniqueSurnameFromTable() {
 		System.out.println("Test case 6:- unique surname  ");
 		HashSet<String> hs = new LinkedHashSet<String>();
 		int numberOfRows = driver.findElements(By.xpath("//*[@id=\"table1\"]/tbody/tr")).size();
@@ -137,7 +137,7 @@ public class Assignment4 {
 
 	/// Program - 7. find duplicate employee id if any. [HashSet, add return type]
 
-	void findDuplicateID() {
+	void findDuplicateEmployeeID() {
 		System.out.println("Test case 7:- Duplicate Employee ID  ");
 		HashSet<String> hs = new HashSet<>();
 		int numberOfRows = driver.findElements(By.xpath("//*[@class='table table-striped']/tbody/tr")).size();
@@ -153,7 +153,7 @@ public class Assignment4 {
 	// Program - 8. find duplicate employee id if any. [Map<String, Integer>, key ->
 	// value >1]
 
-	void findDuplicateEmpId() {
+	void findDuplicateEmployeeId2() {
 		System.out.println("Test case 8:- Duplicate Employee ID  [key -> value >1]");
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 		Map<String, Integer> duplicateID = new HashMap<String, Integer>();
@@ -178,7 +178,7 @@ public class Assignment4 {
 	}
 
 	// Program - 9. Return map of Dept and employee count
-	Map<String, Integer> getDeptAndEmpCount() {
+	Map<String, Integer> getDeptAndEmployeeCount() {
 		System.out.println("Test case 9:- Map of Dept and employee count ");
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 		int numberOfRows = driver.findElements(By.xpath("//*[@class='table table-striped']/tbody/tr")).size();
@@ -196,7 +196,7 @@ public class Assignment4 {
 
 	// Program - 10. Return map of manager id and number of employees reporting to
 	// that manager.
-	void printManagerIdAndReportingEmpNo() {
+	void printManagerIdAndReportingEmployeeNumber() {
 		System.out.println("Test case 10:- Map of manager id and number of employees reporting to that manager. ");
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 		int numberOfRows = driver.findElements(By.xpath("//*[@class='table table-striped']/tbody/tr")).size();
@@ -225,10 +225,10 @@ public class Assignment4 {
 		assignment4.printSpecificRow("mkanani");
 		System.out.println("=======================================================================");
 		
-		assignment4.lastRowFromFirstTable();
+		assignment4.printLastRowFromFirstTable();
 		System.out.println("=======================================================================");
 		
-		List<String> le = assignment4.printFirstName();
+		List<String> le = assignment4.getFirstNameOfEmployeeFromTable();
 		System.out.println(le);
 		System.out.println("=======================================================================");
 		
@@ -236,19 +236,19 @@ public class Assignment4 {
 		System.out.println(hm);
 		System.out.println("=======================================================================");
 		
-		assignment4.printUniqueSurname();
+		assignment4.printUniqueSurnameFromTable();
 		System.out.println("=======================================================================");
 		
-		assignment4.findDuplicateID();
+		assignment4.findDuplicateEmployeeID();
 		System.out.println("=======================================================================");
 		
-		assignment4.findDuplicateEmpId();
+		assignment4.findDuplicateEmployeeId2();
 		System.out.println("=======================================================================");
 		
-		Map<String, Integer> ans = assignment4.getDeptAndEmpCount();
+		Map<String, Integer> ans = assignment4.getDeptAndEmployeeCount();
 		System.out.println(ans);
 		System.out.println("=======================================================================");
 		
-		assignment4.printManagerIdAndReportingEmpNo();
+		assignment4.printManagerIdAndReportingEmployeeNumber();
 	}
 }
